@@ -226,7 +226,7 @@ function Questionnaire({ examData, onBackToExams }) {
             </p>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
               <p className="text-sm text-blue-700">
-                {examData.isOfficial ? 'This is an official' : 'This is a'} ISTQB CTFL v{examData.syllabusVersion} practice exam.
+                {examData.isOfficial ? 'This is an official sample' : 'This is a'} ISTQB CTFL v{examData.syllabusVersion} practice exam.
                 Your progress will be automatically saved as you work through the questions.
               </p>
             </div>
