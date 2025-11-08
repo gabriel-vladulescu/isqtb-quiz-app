@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "questions_count": 40,
+        "questions_pass_count": 26,
+        "is_official": true,
+        "resource_id": 1
+    },
+    {
+        "id": 2,
+        "questions_count": 26,
+        "questions_pass_count": 17,
+        "is_official": true,
+        "resource_id": 2
+    },
+    {
+        "id": 3,
+        "questions_count": 40,
+        "questions_pass_count": 26,
+        "is_official": true,
+        "resource_id": 1
+    },
+    {
+        "id": 4,
+        "questions_count": 40,
+        "questions_pass_count": 26,
+        "is_official": true,
+        "resource_id": 1
+    },
+    {
+        "id": 5,
+        "questions_count": 40,
+        "questions_pass_count": 26,
+        "is_official": true,
+        "resource_id": 1
+    }
+]

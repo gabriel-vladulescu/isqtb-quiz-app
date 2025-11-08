@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "document": "ISTQB CTFL Sample Exam A v1.7",
+        "version": "1.7",
+        "date": "2025-04-01",
+        "syllabusVersion": "4.0.1"
+    },
+    {
+        "id": 2,
+        "document": "ISTQB CTFL Sample Exam B v1.7",
+        "version": "1.7",
+        "date": "2025-04-01",
+        "syllabusVersion": "4.0.1"
+    },
+    {
+        "id": 3,
+        "document": "ISTQB CTFL Sample Exam C v1.7",
+        "version": "1.7",
+        "date": "2025-04-01",
+        "syllabusVersion": "4.0.1"
+    },
+    {
+        "id": 4,
+        "document": "ISTQB CTFL Sample Exam D v1.5",
+        "version": "1.5",
+        "date": "2025-04-01",
+        "syllabusVersion": "4.0.1"
+    }
+]
