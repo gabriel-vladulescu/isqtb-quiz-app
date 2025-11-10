@@ -30,7 +30,9 @@
           "text": "Building confidence in the quality of the test object"
         }
       ],
-      "correctAnswer": "d",
+      "correctAnswer": [
+        "d"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. Finding and fixing defects in the test object is not a typical test objective as although identifying defects is an objective of testing, fixing defects is not a test activity",
@@ -63,7 +65,9 @@
           "text": "The design of the user interface includes a designer error"
         }
       ],
-      "correctAnswer": "c",
+      "correctAnswer": [
+        "c"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. The miscalculation of bonuses is a failure by the system, not a defect",
@@ -96,7 +100,9 @@
           "text": "Defects cluster together"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. The 'tests wear out' principle is concerned with the idea that repeating identical tests on unaltered code is unlikely to uncover novel defects and therefore, modifying tests may be essential. By using test conditions to generate new tests each time, the tests will not be identical and the risk of the tests wearing out is reduced",
@@ -129,7 +135,9 @@
           "text": "1C, 2D, 3A, 4B"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct",
@@ -162,7 +170,9 @@
           "text": "i, iii, iv"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. Items ii (test data) and iv (test procedures - documented sequences of test cases) are produced as a result of test implementation",
@@ -195,7 +205,9 @@
           "text": "Create the test completion report"
         }
       ],
-      "correctAnswer": "d",
+      "correctAnswer": [
+        "d"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. The testing role is primarily responsible for the technical and engineering aspects of testing, such as test analysis, test design, test implementation, and test execution. Evaluating the test basis for defects and the test object for testability are tasks performed as part of test analysis, so it is likely they are tasks performed by the testing role",
@@ -228,7 +240,9 @@
           "text": "Reduced collaboration with external business users"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. The whole team approach promotes robust communication and collaboration between the team members",
@@ -261,7 +275,9 @@
           "text": "ii, iii, v"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct",
@@ -294,7 +310,9 @@
           "text": "Every dynamic testing activity has a corresponding static testing activity"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. Each test level has specific and distinct test objectives as a different form of test object (e.g., single component and complete system) is tested at each test level and overlapping test objectives would lead to unnecessary duplication",
@@ -327,7 +345,9 @@
           "text": "Performance-Driven Development"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. Behavior-Driven Development (BDD) is a well-known example of a test-first approach to development",
@@ -360,7 +380,9 @@
           "text": "Setting up the test automation as part of the delivery pipeline"
         }
       ],
-      "correctAnswer": "d",
+      "correctAnswer": [
+        "d"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. DevOps generally increases the visibility of non-functional quality characteristics, such as performance and reliability",
@@ -393,7 +415,9 @@
           "text": "Retrospectives give agile team members a forum where they focus on discussing the plan and technical decisions for the next iteration"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. The benefits of retrospectives include team bonding and learning from sharing issues, and better collaboration between developers and testers through reviewing and improving working practices. Calling out individuals who a team member may feel did not fully contribute to achieving quality as required by the whole team approach will not contribute to this team bonding and collaboration",
@@ -426,7 +450,9 @@
           "text": "The test checks that the sort function still functions correctly when moved from a 32-bit to a 64-bit architecture"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. Checking that the sort function puts the elements of the list or array in ascending order is evaluating the functional correctness of the sort function, which is part of functional testing",
@@ -459,7 +485,9 @@
           "text": "The language support option of the currency exchange system was used to enable both English and local language currency transactions"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. Assuming that testers could check the ease of changing the currency exchange system then it would be done by maintainability testing rather than maintenance testing, so this is not a trigger for maintenance testing",
@@ -492,7 +520,9 @@
           "text": "Test charter"
         }
       ],
-      "correctAnswer": "c",
+      "correctAnswer": [
+        "c"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. Most work products can be examined using some form of static testing, and a contract must be interpretable by humans and so could be reviewed, which is a form of static testing",
@@ -525,7 +555,9 @@
           "text": "Static testing can identify the defect types that can be found by dynamic testing as well as some extra defect types"
         }
       ],
-      "correctAnswer": "c",
+      "correctAnswer": [
+        "c"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. Some defect types can be found by both static testing and dynamic testing, such as a programming defect that can be observed by a reviewer in a code review and which causes an observable failure during dynamic testing",
@@ -558,7 +590,9 @@
           "text": "5 – 4 – 3 – 2 – 1"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct",
@@ -591,7 +625,9 @@
           "text": "Review Leader"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. The manager is responsible for deciding what needs to be reviewed and allocating resources, such as staff and time, for the review",
@@ -624,7 +660,9 @@
           "text": "Risk-based test techniques"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. The document does not refer to the test object's internal structure but specifies the desired behavior of the test object. Therefore, white-box test techniques will not be helpful in designing test cases",
@@ -661,7 +699,10 @@
           "text": "BY = 2000, CY = 2000"
         }
       ],
-      "correctAnswer": "b,e",
+      "correctAnswer": [
+        "b",
+        "e"
+      ],
       "selectType": "multiple",
       "explanation": {
         "a": "Is not correct. CY – BY = 64, so these inputs correspond to the already covered \"no discount\" partition",
@@ -695,7 +736,9 @@
           "text": "–2, 0, 2, 4"
         }
       ],
-      "correctAnswer": "c",
+      "correctAnswer": [
+        "c"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. This covers only 2 out of 4 boundary values",
@@ -728,7 +771,9 @@
           "text": "No additional test case can increase the already achieved decision table coverage"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. The conditions \"66-year-old\", \"unregistered\" and \"no experience\" match rule R4, which is not covered by the existing test cases, so after adding this test case, the decision table coverage will increase",
@@ -761,7 +806,9 @@
           "text": "NotAvailable, Cancel, ChangeRoom, Available, Pay"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. This sequence of five events covers 4 different valid transitions (both \"NotAvailable\" events correspond to the same transition between S1 and S3). This test case covers 4 out of 7 valid transitions",
@@ -794,7 +841,9 @@
           "text": "After removing one test case from S, the remaining two test cases will still achieve 100% statement coverage"
         }
       ],
-      "correctAnswer": "c",
+      "correctAnswer": [
+        "c"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. A statement with a defect, when executed, does not have to cause a failure. For example, a statement x := y / z will cause a failure only when z equals 0",
@@ -827,7 +876,9 @@
           "text": "White-box test techniques can be used in both static testing and dynamic testing"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. A fundamental strength that all white-box test techniques share is that the entire software implementation is taken into account during testing, which facilitates defect detection even when the software specification is vague, outdated or incomplete. This means white-box testing can find defects such as an extra feature added to the code (either accidentally or deliberately) that is not supposed to be there, which black-box testing cannot detect",
@@ -860,7 +911,9 @@
           "text": "The accuracy of the interest calculated by the system is not precise enough"
         }
       ],
-      "correctAnswer": "c",
+      "correctAnswer": [
+        "c"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. This is an example of anticipating the developer's error",
@@ -893,7 +946,9 @@
           "text": "During exploratory testing the tester may use black-box test techniques"
         }
       ],
-      "correctAnswer": "d",
+      "correctAnswer": [
+        "d"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. In exploratory testing, test cases are usually created during the exploratory testing session, alongside test analysis, test implementation and test execution",
@@ -926,7 +981,9 @@
           "text": "Conversation, so that team members can understand how the software will be used"
         }
       ],
-      "correctAnswer": "d",
+      "correctAnswer": [
+        "d"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. Planning poker can estimate effort for a user story that is already written. It does not help in understanding what should be delivered",
@@ -959,7 +1016,9 @@
           "text": "Enter webpage with three different browsers: Edge, Chrome and Opera. In each browser set filter between $90 and $110. Expected result: results include both products A and B and the results layout is the same in all three browsers"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. This test case is related to acceptance criteria 2 and 3, because we check if we can set price range (acceptance criterion 2) and if the results update dynamically after adjusting the price range filter (acceptance criterion 3)",
@@ -996,7 +1055,10 @@
           "text": "All test analysts are ISTQB certified at the Foundation Level"
         }
       ],
-      "correctAnswer": "b,d",
+      "correctAnswer": [
+        "b",
+        "d"
+      ],
       "selectType": "multiple",
       "explanation": {
         "a": "Is not correct. The approval of the budget is an example of an entry criterion. It would make no sense to approve the budget for some activity that has already been done",
@@ -1030,7 +1092,9 @@
           "text": "12 hours"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. Using the three-point estimation technique, the final estimate (E) is calculated as: E = (a + 4*m + b) / 6, where a is the most optimistic estimate, m is the most likely estimate, and b is the most pessimistic estimate. In this case, the estimate for executing a single test case is: E = (1h + 4*3h + 8h) / 6 = 3.5 hours. So, the total time needed for the tester to execute 4 test cases is: 3.5h * 4 = 14 hours",
@@ -1063,7 +1127,9 @@
           "text": "TC4"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct",
@@ -1096,7 +1162,9 @@
           "text": "They help agile teams to develop a communication strategy based on classifying people according to four basic psychological types, and on modelling the relations between them"
         }
       ],
-      "correctAnswer": "c",
+      "correctAnswer": [
+        "c"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. Testing quadrants have nothing to do with describing the relationships between test levels",
@@ -1129,7 +1197,9 @@
           "text": "$200"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct",
@@ -1166,7 +1236,10 @@
           "text": "Too long response time"
         }
       ],
-      "correctAnswer": "b,e",
+      "correctAnswer": [
+        "b",
+        "e"
+      ],
       "selectType": "multiple",
       "explanation": {
         "a": "Is not correct. Scope creep is an example of a project risk related to technical issues",
@@ -1200,7 +1273,9 @@
           "text": "Providing information on testing planned for the next period"
         }
       ],
-      "correctAnswer": "c",
+      "correctAnswer": [
+        "c"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. Tracking test progress and identifying areas that require further attention is an example of supporting the ongoing control of testing. This is one of the purposes of test reports",
@@ -1233,7 +1308,9 @@
           "text": "Configuration management"
         }
       ],
-      "correctAnswer": "d",
+      "correctAnswer": [
+        "d"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. Risk management consists of risk analysis and risk control. Neither of these activities supports the reassembly of the files that made up the release, because these activities deal with risks, not with configuration items",
@@ -1266,7 +1343,9 @@
           "text": "Repeating the same test case for different environments and writing defect reports for each of them separately"
         }
       ],
-      "correctAnswer": "a",
+      "correctAnswer": [
+        "a"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is correct. Adding this information allows the developer to use the same input data, so it is more likely they will be able to reproduce the failure quickly and so identify the defect faster",
@@ -1299,7 +1378,9 @@
           "text": "ii, iii, iv"
         }
       ],
-      "correctAnswer": "b",
+      "correctAnswer": [
+        "b"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct",
@@ -1332,7 +1413,9 @@
           "text": "Substantially reduced test execution times"
         }
       ],
-      "correctAnswer": "c",
+      "correctAnswer": [
+        "c"
+      ],
       "selectType": "single",
       "explanation": {
         "a": "Is not correct. The detection of additional high-severity defects would be a benefit of test automation, rather than a risk",
