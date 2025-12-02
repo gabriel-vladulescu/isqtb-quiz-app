@@ -1,145 +1,275 @@
-# ISTQB CTFL Practice Exam Application
+# ISTQB Quiz App - Enhanced Edition
 
-A web-based questionnaire application for practicing ISTQB Certified Tester Foundation Level (CTFL) v4.0.1 exam questions.
+A modern, feature-rich quiz application for ISTQB Foundation Level exam preparation with support for visual aids, calculations, and interactive learning.
 
-## Features
+## 🚀 Quick Start
 
-- 40 official ISTQB CTFL Sample Exam A questions
-- Interactive quiz interface with single and multiple-choice questions
-- Automatic progress saving using localStorage
-- Real-time progress tracking
-- Comprehensive results page with score and passing status
-- Detailed answer review with explanations for all options
-- Learning objectives and K-levels for each question
-- Responsive design with TailwindCSS
+### Option 1: Database Mode (Recommended)
 
-## Technology Stack
-
-- **Vite** - Fast build tool and development server
-- **React** - Frontend framework
-- **TailwindCSS** - Utility-first CSS framework
-- **Static JSON** - Question data storage
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (version 16 or higher)
-- npm
-
-### Installation
-
-1. Install dependencies:
 ```bash
+# Install dependencies
 npm install
-```
 
-2. Start the development server:
-```bash
+# Start API server (Terminal 1)
+npm run server
+
+# Start development server (Terminal 2)
 npm run dev
+
+# Open browser at http://localhost:5174 (or port shown in terminal)
 ```
 
-3. Open your browser and navigate to `http://localhost:5173`
+**Ports:**
+- API Server: http://localhost:3001
+- Dev Server: http://localhost:5174
 
-### Build for Production
+### Option 2: Standalone Mode
 
 ```bash
-npm run build
+# Install dependencies
+npm install
+
+# Start development server only
+npm run dev
+
+# Add JSON files to src/data/ (they auto-load)
 ```
 
-The built files will be in the `dist` directory.
+## ✨ Key Features
 
-### Preview Production Build
+### Visual Learning Aids
+- **Decision Tables** - Interactive tables with T/F/X notation
+- **State Transition Tables** - Current State → Event → Next State
+- **State Transition Diagrams** - Visual state flow with arrows
+- **Equivalence Partition Tables** - Valid/Invalid partitions highlighted
+- **Boundary Value Tables** - 2-value and 3-value BVA
+- **Code Snippets** - Syntax-highlighted code with line numbers
 
-```bash
-npm run preview
+### Calculation Support
+- Step-by-step formula explanations
+- Given values clearly displayed
+- Work shown with mathematical steps
+- Final results highlighted
+- All ISTQB formulas supported
+
+### Enhanced UI/UX (v2.0)
+- **Clear Progression:** Confirm → See Result → Next
+- **Professional Icons:** SVG icons throughout
+- **Visual Feedback:** Color-coded correct/incorrect answers
+- **Explanation System:** Show/hide detailed explanations
+- **Progress Tracking:** Real-time timer, correct/wrong count
+- **Auto-Save:** Progress persists in localStorage
+
+## 📊 Latest Updates (v2.0)
+
+### Fixed Confirm/Next Button Logic
+**Before:** Confusing - Confirm and Next shown together
+**After:** Linear flow:
+1. Select answer
+2. Click **"Confirm Answer"**
+3. See result (Correct/Incorrect)
+4. Optionally view explanation
+5. Click **"Next Question"** or **"Finish Exam"**
+
+### Replaced Emojis with SVG Icons
+All emoji replaced with professional SVG icons:
+- Clock icon for timer
+- Checkmark for correct answers
+- X for wrong answers
+- Lightbulb for hints
+- Eye for show/hide
+
+### Removed Backward Compatibility
+- Old exam files moved to `src/data/backup/`
+- Only enhanced format now supported
+- Cleaner codebase
+
+## 📁 Project Structure
+
 ```
-
-## Project Structure
-
-```
-fast-question-app/
+isqtb-quiz-app/
 ├── src/
 │   ├── components/
-│   │   ├── Questionnaire.jsx    # Main questionnaire component
-│   │   ├── Question.jsx          # Question display component
-│   │   ├── ProgressBar.jsx       # Progress indicator
-│   │   └── Results.jsx           # Results and review component
+│   │   ├── Question.jsx                  # Main question display
+│   │   ├── Questionnaire.jsx             # Quiz flow
+│   │   ├── CalculationDisplay.jsx        # Formulas
+│   │   ├── DecisionTableDisplay.jsx      # Decision tables
+│   │   ├── StateTransitionDisplay.jsx    # State transitions
+│   │   ├── TableDisplay.jsx              # EP/BVA tables
+│   │   └── CodeDisplay.jsx               # Code snippets
 │   ├── data/
-│   │   └── sample-exam-a.json    # ISTQB Sample Exam A questions
-│   ├── App.jsx                   # Root component
-│   ├── main.jsx                  # Application entry point
-│   └── index.css                 # Global styles with Tailwind
-├── storage/
-│   └── mock_exams/               # Original PDF files
-├── index.html
-├── package.json
-├── vite.config.js
-└── tailwind.config.js
+│   │   ├── sample-exam-enhanced.json     # Demo exam
+│   │   ├── chapters.json                 # Chapter metadata
+│   │   └── backup/                       # Old files
+│   ├── database/
+│   │   ├── database.sqlite               # SQLite database
+│   │   ├── schema.sql                    # Database schema
+│   │   ├── migrate.js                    # Migration script
+│   │   ├── db-service.js                 # Database queries
+│   │   ├── query-examples.js             # Example queries
+│   │   └── README.md                     # Database docs
+│   └── App.jsx
+├── server.js                             # Express API server
+├── GETTING_STARTED.md                    # Quick start
+├── UPDATES.md                            # Recent changes
+├── DATABASE_SUMMARY.md                   # Database overview
+├── Summary.md                            # Study guide
+└── README.md                             # This file
 ```
 
-## Usage
+## 💾 Database Integration
 
-1. **Start Exam**: Click "Start Exam" button on the welcome screen
-2. **Answer Questions**: Select one or more options for each question
-3. **Navigate**: Use "Previous" and "Next" buttons to move between questions
-4. **Progress Tracking**: Your progress is automatically saved to localStorage
-5. **Finish Exam**: Click "Finish Exam" on the last question
-6. **View Results**: See your score, pass/fail status, and percentage
-7. **Review Answers**: Click "Review Answers" to see detailed explanations
+### SQLite Database (v3.0)
 
-## Exam Details
+The app now includes a SQLite database with full quiz data:
 
-- **Total Questions**: 40
-- **Total Points**: 40
-- **Passing Score**: 26 points (65%)
-- **Recommended Duration**: 60 minutes
-- **Exam Version**: ISTQB CTFL v4.0 Sample Exam A v1.7
-- **Syllabus Version**: 4.0.1
+**Features:**
+- 4 ISTQB resources (Sample Exams A-D)
+- 6 quizzes (5 backup + 1 enhanced demo)
+- 10 enhanced questions with visual aids
+- Normalized structure (5 tables)
+- MySQL-compatible design
 
-## Data Format
+**Database Structure:**
+```
+resources (1) → (N) quizzes (1) → (N) questions
+                                      ↓
+                                   options
+                                   explanations
+```
 
-Questions are stored in JSON format with the following structure:
+**API Endpoints:**
+- `GET /api/health` - Server status
+- `GET /api/quizzes` - List all quizzes
+- `GET /api/quiz/:examId` - Complete quiz with questions
 
+**Migrate/Reset Database:**
+```bash
+node src/database/migrate.js
+```
+
+**Query Database:**
+```bash
+# Run examples
+node src/database/query-examples.js
+
+# Direct SQL
+sqlite3 src/database/database.sqlite
+```
+
+See `DATABASE_SUMMARY.md` and `src/database/README.md` for details.
+
+## 📝 Creating Questions
+
+### Basic Structure
 ```json
 {
-  "examId": "sample-exam-a",
-  "examName": "ISTQB CTFL Sample Exam A v1.7",
-  "totalQuestions": 40,
-  "passingScore": 26,
-  "questions": [
-    {
-      "id": 1,
-      "questionText": "Question text...",
-      "options": [
-        {"key": "a", "text": "Option A text"},
-        {"key": "b", "text": "Option B text"}
-      ],
-      "correctAnswer": "c",
-      "selectType": "single",
-      "explanation": {
-        "a": "Explanation for option A",
-        "b": "Explanation for option B"
-      },
-      "learningObjective": "FL-1.1.1",
-      "kLevel": "K1",
-      "points": 1
-    }
-  ]
+  "id": 1,
+  "questionText": "Your question?",
+  "options": [
+    {"key": "a", "text": "Option A"},
+    {"key": "b", "text": "Option B"}
+  ],
+  "correctAnswer": ["c"],
+  "selectType": "single",
+  "explanation": {...},
+  "learningObjective": "FL-X.X.X",
+  "kLevel": "K2",
+  "points": 1
 }
 ```
 
-## Future Enhancements
+### Add Visual Aid
+```json
+"visualAid": {
+  "type": "decisionTable",
+  "conditions": [...],
+  "actions": [...]
+}
+```
 
-- [ ] Add remaining sample exams (B, C, D)
-- [ ] Add additional appendix questions (A1-A26)
-- [ ] Timer functionality
-- [ ] Question bookmarking
-- [ ] Filter by learning objective or K-level
-- [ ] Statistics and analytics
-- [ ] Export results to PDF
-- [ ] Multiple exam sessions tracking
+### Add Calculation
+```json
+"calculation": {
+  "formula": "Coverage = (Executed / Total) × 100",
+  "given": {"Executed": 15, "Total": 20},
+  "workShown": "(15 / 20) × 100 = 75%",
+  "result": "75%"
+}
+```
 
-## License
+See `src/data/QUESTION_STRUCTURE.md` for complete documentation.
 
-This project contains official ISTQB exam materials. Please refer to ISTQB licensing terms for usage restrictions.
+## 🧪 Demo Exam
+
+The `sample-exam-enhanced.json` demonstrates all features:
+- Q1: Code + statement coverage calculation
+- Q2: Decision table + coverage formula
+- Q3: State transition table
+- Q4: Velocity calculation
+- Q5: Three-point estimation
+- Q6: Boundary value table
+- Q7: Equivalence partition table
+- Q8-9: Various calculations
+- Q10: Basic question
+
+## 🎯 ISTQB Coverage
+
+Supports all v4.0.1 syllabus topics:
+- Chapter 1: Fundamentals
+- Chapter 2: Testing Throughout SDLC
+- Chapter 3: Static Testing
+- Chapter 4: Test Analysis & Design (with visual aids)
+- Chapter 5: Managing Test Activities (with calculations)
+- Chapter 6: Test Tools
+
+## 🔧 Technology
+
+**Frontend:**
+- React 18
+- Vite 6
+- Tailwind CSS
+- SVG Icons
+- LocalStorage
+
+**Backend:**
+- Express 5
+- SQLite 3 (MySQL-compatible)
+- REST API
+- CORS enabled
+
+## 📚 Documentation
+
+- **GETTING_STARTED.md** - Installation guide
+- **src/data/QUESTION_STRUCTURE.md** - Question format reference
+- **UPDATES.md** - Recent changes
+- **Summary.md** - ISTQB study guide
+
+## 🚨 Important
+
+### Adding New Exams
+1. Create JSON file in `src/data/`
+2. Use structure from `sample-exam-enhanced.json`
+3. File auto-loads in exam selector
+
+### Old Exams
+Moved to `src/data/backup/` - can be restored if needed
+
+## 📖 Study Tips
+
+1. Try the enhanced demo exam
+2. Review explanations after each question
+3. Practice calculations (three-point estimation, coverage)
+4. Understand visual aids (decision tables, state transitions)
+5. Use Summary.md for comprehensive review
+
+---
+
+**Version:** 3.0
+**Status:** ✅ Production Ready
+
+**URLs:**
+- Dev Server: http://localhost:5174
+- API Server: http://localhost:3001
+
+**Features:** Visual Aids ✓ | Calculations ✓ | Icons ✓ | Enhanced UI ✓ | Database ✓ | REST API ✓

@@ -1,4 +1,9 @@
 import { useState } from 'react'
+import CalculationDisplay from './CalculationDisplay'
+import DecisionTableDisplay from './DecisionTableDisplay'
+import StateTransitionDisplay from './StateTransitionDisplay'
+import TableDisplay from './TableDisplay'
+import CodeDisplay from './CodeDisplay'
 
 function Question({ question, selectedAnswer, onAnswerSelect, disabled = false, isConfirmed = false, isCorrect = false }) {
   const isMultipleChoice = question.selectType === 'multiple'
@@ -55,6 +60,29 @@ function Question({ question, selectedAnswer, onAnswerSelect, disabled = false, 
     return selectedAnswer === optionKey
   }
 
+  // Helper to render visual aids
+  const renderVisualAid = () => {
+    if (!question.visualAid) return null
+
+    const { type } = question.visualAid
+
+    switch (type) {
+      case 'decisionTable':
+        return <DecisionTableDisplay visualAid={question.visualAid} />
+      case 'stateTransitionTable':
+      case 'stateTransitionDiagram':
+        return <StateTransitionDisplay visualAid={question.visualAid} />
+      case 'equivalencePartitionTable':
+      case 'boundaryValueTable':
+      case 'table':
+        return <TableDisplay visualAid={question.visualAid} />
+      case 'code':
+        return <CodeDisplay visualAid={question.visualAid} />
+      default:
+        return null
+    }
+  }
+
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       {/* Question Header */}
@@ -76,6 +104,24 @@ function Question({ question, selectedAnswer, onAnswerSelect, disabled = false, 
         <p className="text-gray-800 text-lg leading-relaxed mb-3 whitespace-pre-line">
           {question.questionText}
         </p>
+
+        {/* Hint (if present) */}
+        {question.hint && (
+          <div className="mb-3 p-3 bg-yellow-50 border-l-4 border-yellow-400 rounded">
+            <p className="text-sm text-yellow-800 flex items-start gap-2">
+              <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+              <span><span className="font-semibold">Hint:</span> {question.hint}</span>
+            </p>
+          </div>
+        )}
+
+        {/* Visual Aid (before question text if needed for context) */}
+        {question.visualAid && renderVisualAid()}
+
+        {/* Calculation Display (if present) */}
+        {question.calculation && <CalculationDisplay calculation={question.calculation} />}
 
         <p className="text-sm font-medium text-gray-600">
           {isMultipleChoice
@@ -143,10 +189,20 @@ function Question({ question, selectedAnswer, onAnswerSelect, disabled = false, 
                     {option.text}
                   </span>
                   {isConfirmed && isCorrectOption && (
-                    <span className="ml-2 text-green-700 font-medium text-sm">✓ Correct answer</span>
+                    <span className="ml-2 text-green-700 font-medium text-sm flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Correct answer
+                    </span>
                   )}
                   {isConfirmed && isWrongSelection && (
-                    <span className="ml-2 text-red-700 font-medium text-sm">✗ Wrong</span>
+                    <span className="ml-2 text-red-700 font-medium text-sm flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      Wrong
+                    </span>
                   )}
                 </div>
               </div>
